@@ -1,0 +1,106 @@
+.header {
+    margin-bottom: 78px;
+}
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    min-height: 122px; 
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-weight: 700;
+} 
+
+.menu__item {
+    display: inline-block;
+}
+
+.menu__item + .menu__item  {
+    padding-left: 50px;
+} 
+
+.header__box { 
+    display: flex;
+}
+
+.header__adress {
+    margin-right: 60px;
+    width: 265px;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../images/adress-icon.svg');
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        left: 0;
+        top: -10px;
+    }
+}
+
+.user-list {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; 
+    &__item {
+        padding-right: 10px; 
+    }
+}
+
+.basked {
+    position: relative;
+    &__num {
+        position: absolute;
+        font-family: 'SFProDisplay-Medium', sans-serif;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 20px;
+        color: $optional-text-color;
+        background-color: $color-decorative-elements;
+        width: 20px;
+        height: 20px; 
+        border-radius: 50%;
+        text-align: center; 
+        bottom: -4px;
+        right: -13px;
+    }
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 53px;
+    background-color: $background-element-color;
+    &__link {
+        position: relative;
+        font-weight: 400;
+        transition: all .3s ease-in;
+        padding: 15px 0 14px;
+        color: $main-text-color;
+        opacity: 0.8;
+    }
+    &__link::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        left: auto;
+        right: 0;
+        bottom: -2px;
+        background-color:  $color-decorative-elements;
+        transition: all .3s;
+    }
+    &__link:hover {
+        color: #000;
+        opacity: 1;
+    }
+    &__link:hover::before {
+        width: 100%;
+        right: auto;
+        left: 0;
+    }
+
+}
