@@ -1,0 +1,198 @@
+.products__title {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+
+.products__tabs {
+    margin-bottom: 25px;
+}
+
+.products__tab + .products__tab {
+    margin-left: 50px;
+} 
+
+.products__tab {
+    padding-bottom: 10px;
+}
+
+.products__tab.tab--active {
+    border-bottom: 2px solid #1C62CD;
+}
+
+.product-item {
+    border: 1px solid #CDCDCD;
+    border-radius: 3px;
+    text-align: center;
+    padding: 52px 20px 31px;
+    min-height: 400px;
+    transition: all .3s;
+    &:hover {
+        color: $color-decorative-elements;
+        border: transparent;
+        box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    }
+    &__wrapper {
+        position: relative;
+        width: 271px;
+        
+    }
+    &__hover-text {
+        padding: 18px 21px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        display: inline-block;
+        position: absolute;
+        top: 30%;
+        opacity: 0;
+        transition: all .3s;
+    }
+    &:hover .product-item__hover-text {
+        opacity: 1;
+        color: $main-text-color;
+    }
+    &__title {
+        font-weight: normal;
+        padding: 14px 0 25px;
+    }
+    &__favorite {
+        position: absolute;
+        top: 16px;
+        right: 19px;
+        width: 24px;
+        height: 22px;
+        background-color: transparent;
+        border: none;
+        z-index: 5; 
+        outline: none;
+
+    }
+    &__favorite::before {
+        content: '';
+        position: absolute;
+        width: 24px;   
+        height: 22px;
+        top: 0;
+        left: 0;
+        background-image: url('../images/favorite.svg');
+    }
+    &__favorite--active::before {
+        background-image: url('../images/favorite-active.svg');
+    }
+    &__basket {
+        position: absolute;
+        width: 60px;
+        height: 40px;
+        background-color: $color-decorative-elements;
+        border-radius: 10px 0 0 0;
+        bottom: 0;
+        right: 0;
+        padding-top: 7px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    &__price {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    &--sale::before {
+        content: 'SALE';
+        padding: 8px 15px 8px;
+        background-color: $color-decorative-elements;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-transform: uppercase;
+        color: $optional-text-color;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.07em;
+    }
+    &__notify-link {
+        display: none;
+    }
+}  
+
+.product-slider {
+    &__slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        margin: 0;
+        padding: 0;
+        z-index: 5;
+        cursor: pointer;
+    }
+    &__slider-btnprev {
+        left: -30px;
+    }
+    &__slider-btnnext {
+        right: -30px;
+    }
+}
+
+.product-item__wrapper.product-item__not-available .product-item__price {
+    display: none;
+}
+
+.product-item .product-item__notify-text {
+    color: $main-text-color;
+}
+
+.product-item__notify-text {
+    display: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__notify-text {
+    display: block;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__basket {
+    display: none;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__title {
+    padding-bottom: 13px;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__notify-link {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-decorative-elements;
+    text-align: center;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__notify-link span{
+    border-bottom: 1px solid $color-decorative-elements;
+}
+
+.slick-slide img {
+    display: inline;
+}
+
+.product__more {
+    text-align: center;
+    margin: 35px 0 80px;
+}
+
+.product__more-link {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background-color: $background-element-color;
+    padding: 16px 43px;
+}
