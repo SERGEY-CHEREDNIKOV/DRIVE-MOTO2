@@ -32,6 +32,7 @@
     text-align: center;
     padding: 52px 20px 31px;
     min-height: 400px;
+    width: 100%;
     transition: all .3s;
     &:hover {
         color: $color-decorative-elements;
@@ -40,8 +41,11 @@
     }
     &__wrapper {
         position: relative;
-        width: 271px;
-        
+        width: 271px; 
+        transition: width .3s ease-in; 
+    }
+    &__wrapper.product-item__wrapper--list {
+        width: 100%;  
     }
     &__hover-text {
         padding: 18px 21px;
@@ -59,6 +63,8 @@
         color: $main-text-color;
     }
     &__title {
+        font-size: 18px;
+        line-height: 21px;
         font-weight: normal;
         padding: 14px 0 25px;
     }
