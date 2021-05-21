@@ -1,4 +1,3 @@
-
 .banner-section {
     margin-bottom: 80px;
     &__inner {
@@ -41,7 +40,6 @@
 .slick-dots li {
     display: inline-block;
     padding: 0 5px;
-    
 }
 
 .slick-dots button {
@@ -55,13 +53,17 @@
     outline: none;
 }
 
+.slick-dots .slick-active button {
+    background-color: #fff;
+}
+
 .slick-active li button {
     background-color: #fff;
-    outline: none; 
+    outline: none;
 }
-     
-.price {   
-    font-family: 'Barlow', sans-serif;
+
+.price {
+    font-family: "Barlow", sans-serif;
     position: relative;
 }
 
@@ -71,7 +73,7 @@
     justify-content: space-between;
     max-width: 265px;
     text-align: center;
-    border: 1px solid #CDCDCD;
+    border: 1px solid #cdcdcd;
     border-radius: 3px;
     &__top {
         display: flex;
@@ -99,24 +101,24 @@
         padding-right: 20px;
     }
     &__price-new::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 6px;
         right: 1px;
         width: 15px;
         height: 18px;
-        background-image: url('../images/icons-price.svg');
+        background-image: url("../images/icons-price.svg");
         background-repeat: no-repeat;
     }
     &__price-old {
         display: inline-block;
-        color: #C4C4C4;
+        color: #c4c4c4;
         font-size: 14px;
         line-height: 17px;
         font-weight: 400;
         margin-right: 15px;
         padding: 2px 5px;
-        background-image: url('../images/old-line.svg');
+        background-image: url("../images/old-line.svg");
         background-repeat: no-repeat;
     }
     &__price-old::after {
@@ -126,32 +128,87 @@
         right: -10px;
         height: 10px;
         width: 8px;
-        background-image: url('../images/icons-price-old.svg');
+        background-image: url("../images/icons-price-old.svg");
         background-repeat: no-repeat;
     }
     &__img {
         margin-bottom: 5px;
     }
-    &__title{
-        font-family: 'SFProDisplay-Bold', sans-serif;
+    &__title {
+        font-family: "SFProDisplay-Bold", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
         line-height: 21px;
         margin-bottom: 5px;
     }
-    &__footer{
+    &__footer {
         background-color: $background-element-color;
         padding: 25px 20px;
         font-size: 18px;
         line-height: 21px;
     }
-    &__footer span{
+    &__footer span {
         display: block;
-        font-family: 'Barlow', sans-serif;
+        font-family: "Barlow", sans-serif;
         color: $color-decorative-elements;
         font-weight: 700;
     }
-    
 }
 
+@media (max-width: 1200px) {
+    .banner-section {
+        &__slider-img {
+            min-height: 380px;
+            max-width: 600px;
+        }
+        &__inner {
+            justify-content: space-around;
+        }
+        &__slider {
+            max-width: 600px;
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    .banner-section {
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__slider-img {
+            max-width: 100%;
+            margin-bottom: 25px;
+        }
+        &__slider {
+            max-width: 100%;
+        }
+        &__slider-item {
+            text-align: center;
+        }
+        &__slider-btn {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .banner-section {
+        &__slider-img {
+            min-height: 200px;
+        }
+    }
+
+    .banner-section .container {
+        padding: 0;
+    }
+}
+
+@media (max-width: 440px) {
+    .banner-section {
+        &__slider-img {
+            min-height: 164px;
+        }
+    }
+}

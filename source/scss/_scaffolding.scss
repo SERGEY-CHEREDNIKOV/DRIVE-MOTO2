@@ -16,7 +16,9 @@ body {
     line-height: 24px;
     margin: 0;
     padding: 0;    
-    color: $main-text-color;     
+    color: $main-text-color;   
+    min-width: 320px;
+    overflow-x: hidden;  
 }
 
 h1,h2,h3,h4,h5,h6 {

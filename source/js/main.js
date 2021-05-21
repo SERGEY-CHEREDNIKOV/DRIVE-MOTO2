@@ -6,6 +6,14 @@ window.addEventListener('load', function () {
         dots: true,
         prevArrow: '<button class="banner-section__slider-btn  banner-section__slider-btnprev"><img src="images/arrow-left.svg" alt="стрелка влево"></button>',
         nextArrow: '<button class="banner-section__slider-btn  banner-section__slider-btnnext"><img src="images/arrow-right.svg" alt="стрелка вправо"></button>',
+        responsive: [
+            {
+                breakpoint: 970,
+                settings: {
+                    arrows: false,
+                }
+            },
+        ]
     });
 
     $('.tab').on('click', function (e) {
@@ -28,6 +36,39 @@ window.addEventListener('load', function () {
         slidesToScroll: 1,
         prevArrow: '<button class="product-slider__slider-btn  product-slider__slider-btnprev"><img src="images/arrow-black-left.svg" alt="стрелка влево"></button>',
         nextArrow: '<button class="product-slider__slider-btn  product-slider__slider-btnnext"><img src="images/arrow-black-right.svg" alt="стрелка вправо"></button>',
+        responsive: [
+            {
+                breakpoint: 1301,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 1201,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 870,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 590,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    dots: true,
+                }
+            },
+        ]
     });
 
     $('.filter-style').styler();
@@ -57,8 +98,16 @@ window.addEventListener('load', function () {
 
     $(".rate-yo").rateYo({
         ratedFill: "#1c62cd",
-        spacing: "7px", 
+        spacing: "7px",
         normalFill: "#c4c4c4",
     });
 
+    $('.menu__btn').on('click', function () {
+        $('.menu-mobile__list').toggleClass('menu-mobile__list--active');
+    });
+
+    $('.footer__topdrop').on('click', function(){
+        $(this).next().slideToggle();
+        $(this).toggleClass('footer__topdrop--active');
+    });
 });
