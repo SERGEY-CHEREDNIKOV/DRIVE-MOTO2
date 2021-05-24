@@ -1,3 +1,7 @@
+.aside__btn {
+    display: none;
+}
+
 .aside-filter {
     &__tabs {
         display: flex;
@@ -389,4 +393,22 @@
     line-height: 16px;
     color: #C4C4C4;
     border-bottom: 1px solid #C4C4C4;
+}
+
+@media (max-width: 640px) {
+    .aside__btn {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 15px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        color: #fff;
+        background-color: #1c62cd;
+        border-radius: 3px;
+
+    }
+    .aside__filter {
+        display: none;
+    }
 }

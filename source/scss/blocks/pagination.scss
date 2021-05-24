@@ -21,3 +21,9 @@
         display: block;
     }
 }
+
+@media (max-width: 440px) {
+    .pagination__item {
+        margin: 0;
+    }
+}
