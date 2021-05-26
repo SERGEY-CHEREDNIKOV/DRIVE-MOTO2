@@ -86,3 +86,49 @@
         cursor: pointer;
     }
 }
+
+@media (max-width: 1201px) {
+    .slick-slide {
+        text-align: center;
+        text-align: -webkit-center;
+        text-align: -moz-center;
+    }
+}
+@media (max-width: 1100px) {
+    .card {
+        &__label-pickup {
+            margin-left: 30px;
+        }
+    }
+}
+@media (max-width: 968px) {
+    .card {
+        &__input-search {
+            margin-right: 0;
+        }
+        &__top-line label {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-left: 0;
+        }
+        &__list-item {
+            display: block;
+        }
+        &__list-item div {
+            text-align: center;
+            margin-bottom: 15px;
+            margin-right: 0;
+            width: 100%;
+        }
+        &__list-itemtitle {
+            display: none;
+        }
+        &__workhours {
+            display: block;
+        }
+    }
+    .tabs-wrapper.tabs-wrapper--no-scroll {
+        overflow: hidden;
+    }
+}

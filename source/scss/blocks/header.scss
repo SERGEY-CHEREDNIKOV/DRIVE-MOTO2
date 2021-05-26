@@ -140,6 +140,10 @@
     }
 }
 
+.logo__img--mobile{
+    display: none;
+}
+
 @media (max-width: 1100px) {
     .menu__item + .menu__item {
         padding-left: 20px;
@@ -187,3 +191,13 @@
         display: none;
     }
 }
+
+@media (max-width: 440px) {
+    .logo__img {
+        display: none;
+    }
+    .logo__img--mobile{
+        display: block;
+    }
+}
+

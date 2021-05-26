@@ -6,7 +6,7 @@
     }
     &__img-box {
         position: relative;
-        font-family: 'Barlow', sans-serif;
+        font-family: "Barlow", sans-serif;
         width: 500px;
         padding-top: 64px;
         text-align: center;
@@ -22,9 +22,9 @@
         display: inline-block;
         font-weight: normal;
         font-size: 30px;
-        line-height: 44px;        
+        line-height: 44px;
         opacity: 0.6;
-        background-image: url('../images/old-line.svg');
+        background-image: url("../images/old-line.svg");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -38,13 +38,13 @@
         border-bottom: 1px solid #1c62cd;
         font-size: 15px;
         line-height: 18px;
-        color: #1C62CD;
+        color: #1c62cd;
     }
     &__content {
         width: 570px;
     }
     &__title {
-        font-family: 'SFProDisplay-Bold', sans-serif;
+        font-family: "SFProDisplay-Bold", sans-serif;
         font-weight: 700;
         font-size: 30px;
         line-height: 36px;
@@ -54,21 +54,20 @@
         font-size: 15px;
         line-height: 18px;
         opacity: 0.6;
-        color: #2F3035;
+        color: #2f3035;
         margin-bottom: 22px;
     }
     &__buttons {
         margin-bottom: 50px;
     }
-    &__buttons a + a{
+    &__buttons a + a {
         margin-left: 30px;
     }
-
 
     &__tab {
         font-size: 20px;
         line-height: 24px;
-        color: #2F3035;
+        color: #2f3035;
         opacity: 0.6;
         padding-bottom: 5px;
         padding-right: 17px;
@@ -78,12 +77,12 @@
         padding-left: 17px;
     }
     &__tab.tab--active {
-        font-family: 'SFProDisplay-Bold', sans-serif;
+        font-family: "SFProDisplay-Bold", sans-serif;
         font-weight: 700;
         opacity: 1;
         border-bottom: 3px solid #1c62cd;
         transition: opacity 0.4s ease-in;
-    } 
+    }
     &__list {
         margin-bottom: 20px;
     }
@@ -102,18 +101,61 @@
     &__more {
         font-size: 14px;
         line-height: 17px;
-        color: #1C62CD;
-        border-bottom: 1px solid #1C62CD;
+        color: #1c62cd;
+        border-bottom: 1px solid #1c62cd;
         margin-bottom: 40px;
     }
-    &__btn button{
+    &__btn-mobile {
+        display: none;
+    }
+    &__btn button {
         font-size: 14px;
         line-height: 17px;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: #FFFFFF;
-        background-color: #1C62CD;
+        color: #ffffff;
+        background-color: #1c62cd;
         padding: 16px 53px;
         border-radius: 3px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 968px) {
+    .product-card {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__tabs {
+            display: none;
+        }
+        &__content {
+            order: -1;
+        }
+        &__btn button {
+            display: none;
+        }
+        &__btn-mobile button{
+            display: block;
+            margin: 40px auto 0;
+        }
+        &__img-box {
+            width: 100%;
+        }
+    }
+    .product-card__btn-mobile {
+         display: block; 
+    }
+}
+
+@media (max-width: 640px) {
+    .product-card {
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__buttons a + a {
+            margin-left: 10px;
+        }
     }
 }
